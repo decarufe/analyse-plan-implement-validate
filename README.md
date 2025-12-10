@@ -1,6 +1,6 @@
 # Conversation with GitHub Copilot (GPT-5.1-Codex-Max)
 
-This repository captures the conversation I had with GitHub Copilot in VS Code using the GPT-5.1-Codex-Max model. The session was driven through the agent workflow provided by the AI Toolkit.
+This repository captures the conversation I had with GitHub Copilot in VS Code using the GPT-5.1-Codex-Max model. The session was driven through the agent workflow provided in this repo in `/agents` folder.
 
 ## How this conversation unfolded
 
