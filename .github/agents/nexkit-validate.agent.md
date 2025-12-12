@@ -1,15 +1,16 @@
 ---
-description: 'Validate implementation against original requirements and approved plan'
-handoffs: 
+description: "Validate implementation against original requirements and approved plan"
+handoffs:
   - label: Complete Workflow
     agent: agent
     prompt: Notify workflow completion and provide a commit message.
     send: true
   - label: Return to Implementation
-    agent: implement-agent
+    agent: nexkit-implement
     prompt: Address validation issues
     send: true
-tools: ['edit', 'runNotebooks', 'search', 'new', 'runCommands', 'runTasks', 'context7/*', 'microsoftdocs/mcp/*', 'sequential-thinking/*', 'usages', 'vscodeAPI', 'problems', 'changes', 'testFailure', 'openSimpleBrowser', 'fetch', 'githubRepo', 'extensions', 'todos', 'runSubagent', 'runTests']
+tools:
+  ['vscode', 'execute', 'read', 'edit', 'search', 'web', 'context7/*', 'sequential-thinking/*', 'agent', 'todo']
 ---
 
 # Validate Agent
@@ -23,6 +24,7 @@ Systematically validate that all requirements are satisfied and the plan was exe
 ## Inputs
 
 You need access to:
+
 1. Original requirements summary (from Analyse Agent)
 2. Approved implementation plan (from Plan Agent)
 3. Implementation report (from Implement Agent)
@@ -38,6 +40,7 @@ You need access to:
 ## Validation Checklist
 
 For each requirement:
+
 ```
 - [ ] Requirement: [description]
   - Status: [MET / PARTIAL / NOT MET]
@@ -46,6 +49,7 @@ For each requirement:
 ```
 
 For each planned task:
+
 ```
 - [ ] Task: [name]
   - Status: [COMPLETE / INCOMPLETE / SKIPPED]

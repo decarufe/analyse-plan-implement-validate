@@ -1,11 +1,23 @@
 ---
-description: 'Execute approved implementation plans autonomously without user intervention'
-handoffs: 
+description: "Execute approved implementation plans autonomously without user intervention"
+handoffs:
   - label: Start Validation
-    agent: validate-agent
+    agent: nexkit-validate
     prompt: Validate the implementation
     send: true
-tools: ['edit', 'runNotebooks', 'search', 'new', 'runCommands', 'runTasks', 'context7/*', 'microsoftdocs/mcp/*', 'sequential-thinking/*', 'usages', 'vscodeAPI', 'problems', 'changes', 'testFailure', 'openSimpleBrowser', 'fetch', 'githubRepo', 'extensions', 'todos', 'runSubagent', 'runTests']
+tools:
+  [
+    "vscode",
+    "execute",
+    "read",
+    "edit",
+    "search",
+    "web",
+    "context7/*",
+    "sequential-thinking/*",
+    "agent",
+    "todo",
+  ]
 ---
 
 # Implement Agent
@@ -19,6 +31,7 @@ Implement the approved plan exactly as specified. Work autonomously without aski
 ## Inputs
 
 Expect an approved implementation plan containing:
+
 - Task list with specific files and actions
 - Order of operations
 - Technical details for each change
@@ -45,6 +58,7 @@ Expect an approved implementation plan containing:
 ## Progress Tracking
 
 After each task, note:
+
 ```
 ✅ Task N: [name] - Complete
    Files: [list]

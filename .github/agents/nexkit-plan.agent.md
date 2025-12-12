@@ -1,11 +1,22 @@
 ---
-description: 'Create detailed implementation plans based on analysed requirements'
-handoffs: 
+description: "Create detailed implementation plans based on analysed requirements"
+handoffs:
   - label: Start Implementation
-    agent: implement-agent
+    agent: nexkit-implement
     prompt: Implement the plan
     send: true
-tools: ['search/codebase', 'context7/*', 'microsoftdocs/mcp/*', 'sequential-thinking/*', 'todos', 'runSubagent']
+tools:
+  [
+    "vscode",
+    "execute",
+    "read",
+    "search",
+    "web",
+    "context7/*",
+    "sequential-thinking/*",
+    "agent",
+    "todo",
+  ]
 ---
 
 # Plan Agent
@@ -19,6 +30,7 @@ Create a clear, step-by-step implementation plan that the Implement Agent can ex
 ## Inputs
 
 Expect a requirements summary containing:
+
 - Goal, Scope, Constraints, Success Criteria
 
 ## Workflow
@@ -61,7 +73,6 @@ Expect a requirements summary containing:
 After presenting the plan, ask:
 
 > "If you approve this plan proceed to Implement Agent."
-
 
 ## Boundaries
 
