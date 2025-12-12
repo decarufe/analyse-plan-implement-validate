@@ -10,7 +10,7 @@ This repository captures the conversation I had with GitHub Copilot in VS Code u
 ## What’s in this repo
 
 - `Conversation.md` — the full transcript of the exchange.
-- `agents/` — agent configuration files used during the workflow:
+- `.github/agents/` — agent configuration files used during the workflow:
   - `analyse-agent.agent.md`
   - `plan-agent.agent.md`
   - `implement-agent.agent.md`
@@ -19,7 +19,7 @@ This repository captures the conversation I had with GitHub Copilot in VS Code u
 ## How to read this
 
 1. Open `Conversation.md` to see the dialogue as it happened.
-2. Browse the `agents/` folder to understand the roles and prompts each agent used.
+2. Browse the `.github/agents/` folder to understand the roles and prompts each agent used.
 3. Follow the sequence to see how the agents collaborated from the first prompt through completion.
 
 ## Notes
